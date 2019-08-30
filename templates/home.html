@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .writebox{
+        width: 300px;
+        height:150px;
+        box-sizing: border-box;
+        background: black;
+        colour: grey;
+        }
+        .writebox textarea{
+        width: 300px;
+        height: 150px;
+        background: transparent;
+        color: white;
+
+        border: none;
+        }
+    </style>
+</head>
+<body>
+<h3>you are on html page!!</h3>
+<form action="{% url 'count' %}">
+    <p>Enter your text here</p><br>
+    <div class="writebox">
+
+            <textarea col="180" raw="100" name="fulltext"></textarea>
+            <br>
+            <input type="submit" value="Count">
+
+    </div>
+
+</form>
+
+
+
+
+</body>
+</html>

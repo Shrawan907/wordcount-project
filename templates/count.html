@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+        background: darkblue;
+        color: yellow;
+        font-size: 20px;
+        }
+        .textbox{
+        width: 150px;
+        height: 100%;
+        background: black;
+        color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>There are {{count}} words.</h1>
+
+<p>{{ fulltext }}</p>
+<br>
+<form action="{% url 'home' %}">
+<input type="submit" value="try again">
+
+</form>
+<a href="{% url 'about' %}"><button>hidden info</button></a>
+<h2>Count List:</h2>
+<div class="textbox">
+{% for word, number in sortedword %}
+{{ word }}-{{ number }}
+<br />
+
+{% endfor %}
+</div>
+
+</body>
+</html>
